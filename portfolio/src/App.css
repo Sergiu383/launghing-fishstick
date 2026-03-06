@@ -1,0 +1,106 @@
+.hero {
+  background-color: var(--secondary-color);
+  color: white;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background-color: var(--primary-color);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.hero h1 {
+  color: var(--primary-color);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--accent-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.date-label {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-tag {
+  background: white;
+  border: 2px solid var(--primary-color);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--accent-light);
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
